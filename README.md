@@ -18,6 +18,10 @@
 
 코드 zip 파일이나 GitHub Public 리포지토리 링크를 developer@fetching.co.kr로 보내주세요
 
+## 목적
+- REST에 대한 이해도 검증
+- SQL에 대한 이해도 검증
+
 ## 문의 사항
 
 과제를 수행하며 궁금한 점이 생기시면 developer@fetching.co.kr로 문의해주세요
