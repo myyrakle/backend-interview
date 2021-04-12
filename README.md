@@ -16,7 +16,7 @@
 
 ## 제출 방법
 
-코드 zip 파일이나 GitHub Public 리포지토리 링크를 developer@fetching.co.kr로 보내주세요
+이 리포지토리를 fork하여 개발한 후, PR을 보내주세요.
 
 ## 목적
 - REST에 대한 이해도 검증
