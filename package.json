@@ -1,0 +1,26 @@
+{
+  "name": "backend-interview",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Fetching-Korea/backend-interview.git",
+  "author": "startergate <startergate36@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc && node ./dist/bin/www",
+    "build": "tsc",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/bin/www.ts"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-promise-router": "^4.1.0",
+    "mysql2": "^2.2.5"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/node": "^14.14.37",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}
