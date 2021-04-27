@@ -35,4 +35,10 @@ export class ProductDibs extends Model {
     @ForeignKey(() => Product)
     @Column
     productId: bigint;
+
+    @Comment("사용여부(논리적 삭제)")
+    @AllowNull(false)
+    @Default(true)
+    @Column
+    useYn: boolean;
 }

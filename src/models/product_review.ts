@@ -10,6 +10,7 @@ import {
     PrimaryKey,
     AutoIncrement,
     ForeignKey,
+    BelongsTo,
 } from "sequelize-typescript";
 import { Product } from "./product";
 import { User } from "./user";
@@ -44,4 +45,13 @@ export class ProductReview extends Model {
     @AllowNull(false)
     @Column(DataType.TEXT)
     content: string;
+
+    @Comment("사용여부(논리적 삭제)")
+    @AllowNull(false)
+    @Default(true)
+    @Column
+    useYn: boolean;
+
+    @BelongsTo(() => User)
+    user: User;
 }

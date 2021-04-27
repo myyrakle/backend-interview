@@ -3,6 +3,7 @@ import { UserCreateDto } from "../dtos/user.create.dto";
 import { UserService } from "../services/user.service";
 
 export class UserController {
+    // 회원가입
     async signup(req: Request, res: Response, next: NextFunction) {
         const name = String(req.body.name);
         const email = String(req.body.email);
@@ -44,6 +45,7 @@ export class UserController {
         }
     }
 
+    // 이메일 중복 체크
     async checkEmailDuplicated(
         req: Request,
         res: Response,
@@ -100,10 +102,9 @@ export class UserController {
         }
     }
 
+    // 내 회원정보 조회
     async getMyInto(req: Request, res: Response, nest: NextFunction) {
         try {
-            const userService = new UserService();
-
             if (req.authUser === null) {
                 res.status(401).json({
                     success: false,

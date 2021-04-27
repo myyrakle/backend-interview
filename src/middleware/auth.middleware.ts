@@ -18,6 +18,10 @@ export async function authMiddleware(
 
         const user = await userService.findOneById(result.userId);
 
+        if (user === null) {
+            throw 0;
+        }
+
         req.authUser = user;
 
         console.log("!!!! 인증 성공");

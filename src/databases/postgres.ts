@@ -11,6 +11,8 @@ const sequelize = new Sequelize(process.env.SHOP_DATABASE_URL);
 
 sequelize.addModels([User, RefreshToken, Product, ProductDibs, ProductReview]);
 
+//sequelize.sync({ force: false, });
+
 // if (process.env.MODE == "dev") {
 //     sequelize.sync({ force: true });
 // }

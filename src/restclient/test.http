@@ -1,6 +1,6 @@
 @token = localhost:3000
 
-###
+### 회원가입
 POST http://{{token}}/api/user/signup
 Content-Type: application/json
 
@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 ###
 
-###
+### 로그인
 POST http://{{token}}/api/auth/login
 Content-Type: application/json
 
@@ -21,4 +21,140 @@ Content-Type: application/json
 }
 ###
 
+### 토큰 리프레쉬
+PUT http://{{token}}/api/auth/refresh
+Content-Type: application/json
 
+{
+    "refreshToken": "sssang97@naver.com"
+}
+###
+
+### 로그아웃
+DELETE http://{{token}}/api/auth/logout?refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwidXNlclR5cGUiOiJVU0VSIiwiaWF0IjoxNjE5NTI1MDE2LCJleHAiOjE2MjgxNjUwMTZ9.SA91jFFxs_2YNqmbr3YmMJQ1H9qH1RO86aHyy1mT7_8
+Content-Type: application/json
+
+{
+}
+###
+
+
+### 내 정보 조회
+GET http://{{token}}/api/user/my-info
+Content-Type: application/json
+
+{
+}
+###
+
+### 상품 생성
+POST http://{{token}}/api/product/product
+Content-Type: application/json
+
+{
+    "name": "밥솥", 
+    "description": "쿠쿠가 맛있는 밥을 시작합니다.",
+    "brand": "쿠쿠", 
+    "size": "10mm x 20mm",
+    "color": "밝은 진홍색에 핫핑크"
+}
+###
+
+### 상품 수정
+PUT http://{{token}}/api/product/product/1
+Content-Type: application/json
+
+{
+    "name": "영계백숙", 
+    "description": "할머니의 손맛",
+    "brand": "삼성", 
+    "size": "100L",
+    "color": "하얀색"
+}
+###
+
+### 상품 삭제
+DELETE http://{{token}}/api/product/product/1
+Content-Type: application/json
+
+{
+}
+###
+
+### 상품 조회
+GET http://{{token}}/api/product/product/2
+Content-Type: application/json
+
+{
+}
+###
+
+### 상품 목록조회
+GET http://{{token}}/api/product/product-list?page=1&order=name&asc=true&dibs=true
+Content-Type: application/json
+
+{
+}
+###
+
+### 상품 찜
+POST http://{{token}}/api/product/product/1/dibs
+Content-Type: application/json
+
+{
+}
+###
+
+### 상품 찜 해제
+DELETE http://{{token}}/api/product/product/1/dibs
+Content-Type: application/json
+
+{
+}
+###
+
+### 상품에 리뷰 작성
+POST http://{{token}}/api/product/product/review
+Content-Type: application/json
+
+{
+    "productId": 1,
+    "star": 4,
+    "content": "애매해요"
+}
+###
+
+### 리뷰 수정
+PUT http://{{token}}/api/product/product/review/1
+Content-Type: application/json
+
+{
+    "productId": 1,
+    "star": 4,
+    "content": "애매해요!!"
+}
+###
+ 
+### 리뷰 조회
+GEt http://{{token}}/api/product/product/review/1
+Content-Type: application/json
+
+{
+}
+###
+
+### 리뷰 삭제
+DELEte http://{{token}}/api/product/product/review/1
+Content-Type: application/json
+
+{
+}
+###
+
+### 리뷰 목록 조회
+GEt http://{{token}}/api/product/review/review-list
+Content-Type: application/json
+
+{
+}
+###

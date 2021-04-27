@@ -10,7 +10,9 @@ import {
     PrimaryKey,
     AutoIncrement,
     ForeignKey,
+    HasMany,
 } from "sequelize-typescript";
+import { ProductDibs } from "./product_dibs";
 import { User } from "./user";
 
 //상품 테이블
