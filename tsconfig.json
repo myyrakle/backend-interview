@@ -12,6 +12,7 @@
     "baseUrl": "./",
     "incremental": true,
     "resolveJsonModule": true,
+    "moduleResolution": "node",
     "esModuleInterop": true
   },
   "include": [
