@@ -13,10 +13,10 @@ router.post("/product/:id/dibs", controller.dibsOne);
 router.delete("/product/:id/dibs", controller.undibsOne);
 router.get("/product-list", controller.findList);
 
-router.post("/product/review", controller.createReview);
-router.put("/product/review/:id", controller.updateReview);
-router.get("/product/review/:id", controller.findReview);
-router.delete("/product/review/:id", controller.deleteReview);
-router.get("/review/review-list", controller.findReviewList);
+router.post("/review", controller.createReview);
+router.put("/review/:id", controller.updateReview);
+router.get("/review/:id", controller.findReview);
+router.delete("/review/:id", controller.deleteReview);
+router.get("/review-list", controller.findReviewList);
 
 module.exports = router;
