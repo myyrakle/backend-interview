@@ -1,0 +1,24 @@
+@token = localhost:3000
+
+###
+POST http://{{token}}/api/user/signup
+Content-Type: application/json
+
+{
+    "name": "테스터", 
+    "email": "sssang97@naver.com",
+    "password":"foobar1234"
+}
+###
+
+###
+POST http://{{token}}/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "sssang97@naver.com",
+    "password":"foobar1234"
+}
+###
+
+

@@ -11,6 +11,7 @@ import {
     AutoIncrement,
 } from "sequelize-typescript";
 
+// 사용자 테이블
 @Table
 export class User extends Model {
     @Comment("식별자")
@@ -44,4 +45,10 @@ export class User extends Model {
     @Default("USER")
     @Column(DataType.ENUM("USER", "ADMIN"))
     userType: string;
+
+    @Comment("사용자 상태. (0이면 정상. 1 이상이면 탈퇴")
+    @AllowNull(false)
+    @Default(0)
+    @Column
+    userStatus: bigint;
 }

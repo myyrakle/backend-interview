@@ -11,30 +11,37 @@ import {
     AutoIncrement,
     ForeignKey,
 } from "sequelize-typescript";
+import { Product } from "./product";
 import { User } from "./user";
 
+//상품 리뷰 테이블
 @Table
-export class RefreshToken extends Model {
+export class ProductReview extends Model {
     @Comment("식별자")
     @PrimaryKey
     @AutoIncrement
     @Column
     id: bigint;
 
-    @Comment("사용자 식별자")
+    @Comment("리뷰 작성자")
     @AllowNull(false)
     @ForeignKey(() => User)
     @Column
     userId: bigint;
 
-    @Comment("토큰값")
+    @Comment("상품 식별자")
+    @AllowNull(false)
+    @ForeignKey(() => Product)
+    @Column
+    productId: bigint;
+
+    @Comment("별 개수")
+    @AllowNull(false)
+    @Column(DataType.INTEGER)
+    star: number;
+
+    @Comment("리뷰 내용")
     @AllowNull(false)
     @Column(DataType.TEXT)
-    tokenValue: string;
-
-    @Comment("사용여부")
-    @AllowNull(false)
-    @Default(true)
-    @Column
-    useYn: boolean;
+    content: string;
 }
